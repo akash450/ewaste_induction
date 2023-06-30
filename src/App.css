@@ -1,0 +1,301 @@
+.App {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 10;
+  padding: 20;
+}
+
+body {
+  font-family: ""Segoe UI", sans-serif";
+  color: black;
+  background: white;
+  height: 100vh;
+}
+
+.header-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50;
+    padding: 10;
+    position: relative;
+}
+
+.leftContainer {
+  width: 50px;
+}
+
+.rightContainer {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.fa-star {
+  color: #3eac57;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3eac57;
+  transition: opacity .5s, visibility .5s;
+  z-index: 2
+}
+
+.menuitem {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10;
+  list-style-type: none;
+  cursor: pointer;
+  transition: font-size 0.2s ease-in-out; /* Add a smooth transition effect */
+  animation: fadeInRight .5s ease
+}
+
+.menuitem:hover {
+  font-size: 35px;
+}
+
+#logout {
+  color: red;
+  margin-top: 40px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  cursor: pointer;
+  transition: opacity .25s ease;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.formHeading {
+  font-size: 25;
+  font-weight: 500;
+  text-align: center;
+}
+
+.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+  background-color: white;
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background-color: white;
+}
+
+.container {
+  background-color: white;
+  padding: 30;
+  align-items: center;
+  margin: 20;
+}
+
+.namecontainer, .rolecontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+}
+
+.formcontainer input:not(#file) {
+  border-radius: 20px;
+  margin: 5px;
+  border: 1px solid;
+  width: 40%;
+  border-color: rgba(220, 220, 220, 0.9);
+  color: black;
+}
+
+.formcontainer ::placeholder {
+  color: rgba(220, 220, 220, 0.9);
+}
+
+#file {
+  display:none;
+}
+
+.bottomtext {
+  color:#3eac57;
+  align-self: center;
+  font-size: 12px;
+}
+
+.rolebutton {
+  background-color: #3eac57;
+  margin: 10px;
+  padding: 20px;
+  width: 120px;
+  text-align: center;
+
+}
+
+.button {
+  background-color: #3eac57;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  width: 30%;
+  color: white;
+  cursor: pointer;
+}
+
+.activitycontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200;
+}
+
+.icons {
+  display: inline-flex;
+}
+
+.videocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.questionText {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20;
+}
+
+.answerButton {
+  background-color: #3eac57;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px;
+  min-width: 200;
+}
+
+.answerText {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+}
+
+.scoreText {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20;
+}
+
+.playblock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3eac57;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 64px;
+  cursor: pointer
+}
+
+.playbutton {
+  display: inline-block;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 16px solid white;
+  margin-left: 6px;
+  margin-bottom: 7px;
+}
+
+.pointsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.fa-trash-o {
+  color: red;
+  align-self: center;
+  cursor: pointer;
+}
+
+.fa-plus-circle {
+  color: #3eac57;
+  align-self: center;
+  cursor: pointer;
+}
+
+.containerWrapper {
+  height: 100%;
+  width: 10%;
+  justify-content: center;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 600;
+}
